@@ -6,6 +6,7 @@ idex page:
         -show first question with multiple choice answers
         -cycle through 10 questions
         -Completed screen with final score, spot to enter initials, "Submit" button
+            Create var to hold score
         -high scores page, "start over" "clear high scores" button
 
 
