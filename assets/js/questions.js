@@ -1,9 +1,9 @@
 var questions = [
     {
-        question: "Which method removes the last element from an array and returns the element?",
+        question: "question 1",
         answers: [
             {
-                a: ".pop()",
+                a: "answer",
                 correct: true
             },
             {
@@ -22,7 +22,29 @@ var questions = [
         
     },
     {
-        question: "Which function of Array objects adds one or more elements to the end of an array and returns the new length of the array? ",
+        question: "question 2",
+        answers: [
+            {
+                a: ".pop()",
+                correct: false
+            },
+            {
+                a: ".join()",
+                correct: false
+            },
+            {
+                a: "answer",
+                correct: true
+            },
+            {
+                a: ".map()",
+                correct: false
+            }
+        ],
+        
+    },
+    {
+        question: "question 3",
         answers: [
             {
                 a: ".pop()",
@@ -34,7 +56,51 @@ var questions = [
             },
             {
                 a: ".push()",
+                correct: false
+            },
+            {
+                a: "answer",
                 correct: true
+            }
+        ],
+        
+    },
+    {
+        question: "question 4",
+        answers: [
+            {
+                a: ".pop()",
+                correct: false
+            },
+            {
+                a: ".join()",
+                correct: false
+            },
+            {
+                a: "answer",
+                correct: true
+            },
+            {
+                a: ".map()",
+                correct: false
+            }
+        ],
+        
+    },
+    {
+        question: "question 5",
+        answers: [
+            {
+                a: "answer",
+                correct: true
+            },
+            {
+                a: ".join()",
+                correct: false
+            },
+            {
+                a: ".push()",
+                correct: false
             },
             {
                 a: ".map()",
