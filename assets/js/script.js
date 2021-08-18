@@ -74,11 +74,23 @@ display.addEventListener("click", function (event) {
         correctwrong.textContent = "Correct!!!"
     }
 
+    if (questionCount < 5) {
+        showQuestion()
+        showAnswer()
+    }
 
-    showQuestion()
-    showAnswer()
+    else {
+        // clearInterval(timerFunction);
+        display.setAttribute("style", "display:none");
+        question.setAttribute("style", "display:none");
+        gameOver.setAttribute("style", "display:block");
+        localStorage.setItem("score", score)
+        userScore.setAttribute("style", "display:block")
+        userScore.textContent = localStorage.getItem("score")
+    }
 
-    return; 
+
+    return;
 
 
 
@@ -86,13 +98,13 @@ display.addEventListener("click", function (event) {
 
 
 
-form.addEventListener("click", function(event){
+form.addEventListener("click", function (event) {
     event.preventDefault();
     var element = event.target;
     var initials = document.querySelector("#initials").value
     localStorage.setItem("score", score)
     localStorage.setItem("initials", initials)
-    console.log (initials)
+    console.log(initials)
 
 });
 
