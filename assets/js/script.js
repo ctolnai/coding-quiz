@@ -12,8 +12,8 @@ var display = document.querySelector(".answer");
 var gameOver = document.querySelector(".gameOver");
 var question = document.querySelector("#question");
 var userScore = document.querySelector("#userScore");
-var form = document.querySelector("#form");
-
+var form = document.querySelector("#submit");
+var gameDone = false
 
 
 document.getElementById("title").textContent = "Coding Quiz Challenge";
@@ -87,26 +87,29 @@ display.addEventListener("click", function (event) {
         localStorage.setItem("score", score)
         userScore.setAttribute("style", "display:block")
         userScore.textContent = localStorage.getItem("score")
-    }
+        gameDone = true
+        if (gameDone){
 
+            form.addEventListener("click", function (event) {
+                event.preventDefault();
+                var element = event.target;
+                var initials = document.querySelector("#initials").value
+                localStorage.setItem("score", score)
+                localStorage.setItem("initials", initials)
+                console.log(initials)
+            
+                // GO BACK TO MAIN SCREEN
+                window.location.href="index.html"
+            
+            });
+            }
+            
+    }
+    
 
     return;
 
 
-
-});
-
-
-
-form.addEventListener("click", function (event) {
-    event.preventDefault();
-    var element = event.target;
-    var initials = document.querySelector("#initials").value
-    localStorage.setItem("score", score)
-    localStorage.setItem("initials", initials)
-    console.log(initials)
-
-    // GO BACK TO MAIN SCREEN
 
 });
 
