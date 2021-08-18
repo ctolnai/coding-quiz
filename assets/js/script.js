@@ -106,10 +106,11 @@ form.addEventListener("click", function (event) {
     localStorage.setItem("initials", initials)
     console.log(initials)
 
+    // GO BACK TO MAIN SCREEN
+
 });
 
 
-// 5. when all the questions are answered, game is over - right now only when time runs out
 // 8. click View Highscores to show initials and scores from local storage
 
 function showQuestion() {
