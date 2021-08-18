@@ -39,3 +39,7 @@ h3{
 /* .score{
     display: none;
 } */
+
+#correctwrong{
+    color:salmon
+}

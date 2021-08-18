@@ -12,13 +12,15 @@ var display = document.querySelector(".answer");
 var gameOver = document.querySelector(".gameOver");
 var question = document.querySelector("#question");
 var userScore = document.querySelector("#userScore");
+var form = document.querySelector("#form");
+
 
 
 document.getElementById("title").textContent = "Coding Quiz Challenge";
 document.getElementById("question").textContent = "Try to answer the following code-related questions within the time limit.  Incorrect answers will penalize your score by 10 seconds."
 document.getElementById("start").textContent = "Start";
 
-var time = 10;
+var time = 30;
 let questionCount = 0
 
 
@@ -36,7 +38,7 @@ start.addEventListener("click", function (event) {
     display.setAttribute("style", "display:block")
 
     // timer function for countdown
-    timer.textContent = "60 seconds"
+    timer.textContent = "30 seconds"
     var timerFunction =
         setInterval(function () {
             time--;
@@ -64,31 +66,38 @@ display.addEventListener("click", function (event) {
 
     if (useranswer === "false") {
         time -= 10
+        correctwrong.textContent = "Wrong!!"
     }
 
     if (useranswer === "true") {
         score += 1
+        correctwrong.textContent = "Correct!!!"
     }
 
 
     showQuestion()
     showAnswer()
 
-    return; score
+    return; 
 
 
 
 });
 
-console.log(localStorage.getItem("score"));
 
 
+form.addEventListener("click", function(event){
+    event.preventDefault();
+    var element = event.target;
+    var initials = document.querySelector("#initials").value
+    localStorage.setItem("score", score)
+    localStorage.setItem("initials", initials)
+    console.log (initials)
+
+});
 
 
-
-// 4a. show correct/wrong underneath next question
-// 5. when all the questions are answered, game is over
-// 7. enter initials, save initials and score to local storage
+// 5. when all the questions are answered, game is over - right now only when time runs out
 // 8. click View Highscores to show initials and scores from local storage
 
 function showQuestion() {
