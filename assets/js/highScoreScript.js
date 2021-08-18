@@ -1,11 +1,12 @@
-var scoreInitials = localStorage.getItem("initials");
-var scoreHighScore = localStorage.getItem("score");
+// var scoreInitials = localStorage.getItem("initials");
+// var scoreHighScore = localStorage.getItem("score");
+// console.log(scoreInitials)
+// console.log(scoreHighScore)
+
+
+
 var showInitials = document.querySelector("#showInitials");
 var showHighScore = document.querySelector("#showHighScore");
-
-console.log(scoreInitials)
-console.log(scoreHighScore)
-
 showInitials.textContent = localStorage.getItem("initials");
 showHighScore.textContent = localStorage.getItem("score");
 
