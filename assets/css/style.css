@@ -23,6 +23,19 @@ h2 {
     font-size: 1rem;
 }
 
+h3{
+    font-size: 3rem;
+    color:red;
+}
+
 .answer{
     display: none;
 }
+
+.gameOver{
+    display: none;
+}
+
+/* .score{
+    display: none;
+} */

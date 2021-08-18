@@ -8,12 +8,16 @@ var answer3 = document.querySelector("#answer3");
 var correctwrong = document.querySelector("#correctwrong");
 var timer = document.querySelector("#timer");
 var container = document.querySelector(".container");
-var display = document.querySelector(".answer")
+var display = document.querySelector(".answer");
+var gameOver = document.querySelector(".gameOver");
+var question = document.querySelector("#question");
+var userScore = document.querySelector("#userScore");
 
 
 document.getElementById("title").textContent = "Coding Quiz Challenge";
 document.getElementById("question").textContent = "Try to answer the following code-related questions within the time limit.  Incorrect answers will penalize your score by 10 seconds."
 document.getElementById("start").textContent = "Start";
+
 var time = 10;
 let questionCount = 0
 
@@ -40,59 +44,65 @@ start.addEventListener("click", function (event) {
 
             if (time <= 0) {
                 clearInterval(timerFunction);
-                container.setAttribute("style", "display:none");
+                display.setAttribute("style", "display:none");
+                question.setAttribute("style", "display:none");
+                gameOver.setAttribute("style", "display:block");
+                localStorage.setItem("score", score)
+                userScore.setAttribute("style", "display:block")
+                userScore.textContent = localStorage.getItem("score")
             }
         }, 1000);
 
-    // timer runs out, game is over    
-        
+
 });
 
 
-    display.addEventListener("click", function (event) {
-        var element = event.target;
-        var useranswer = element.getAttribute("data-correct")
-        questionCount = questionCount += 1
+display.addEventListener("click", function (event) {
+    var element = event.target;
+    var useranswer = element.getAttribute("data-correct")
+    questionCount = questionCount += 1
 
-        if (useranswer === "false") {
-            time -= 10
-        }
-
-        if (useranswer === "true") {
-            score += 1
-        }
-
-
-        showQuestion()
-        showAnswer()
-
-        console.log(score);
-        
-
-
-    });
-  
-    
-
-    // 4a. show correct/wrong underneath next question
-    // 5. when all the questions are answered, game is over
-    // 6. when time runs out, game is over
-    // 7. enter initials, save initials and score to local storage
-    // 8. click View Highscores to show initials and scores from local storage
-
-    function showQuestion() {
-        document.getElementById("question").textContent = questions[questionCount].question;
-        for (let i = 0; i < 4; i++) {
-            document.getElementById(`answer${i}`).textContent = questions[questionCount].answers[i].a;
-        }
+    if (useranswer === "false") {
+        time -= 10
     }
 
-    function showAnswer() {
-        document.getElementById("question").textContent = questions[questionCount].question;
-        for (let i = 0; i < 4; i++) {
-            document.getElementById(`answer${i}`).textContent = questions[questionCount].answers[i].a;
-            document.getElementById(`answer${i}`).setAttribute("data-correct", questions[questionCount].answers[i].correct)
-        }
+    if (useranswer === "true") {
+        score += 1
     }
 
-    
+
+    showQuestion()
+    showAnswer()
+
+    return; score
+
+
+
+});
+
+console.log(localStorage.getItem("score"));
+
+
+
+
+
+// 4a. show correct/wrong underneath next question
+// 5. when all the questions are answered, game is over
+// 7. enter initials, save initials and score to local storage
+// 8. click View Highscores to show initials and scores from local storage
+
+function showQuestion() {
+    document.getElementById("question").textContent = questions[questionCount].question;
+    for (let i = 0; i < 4; i++) {
+        document.getElementById(`answer${i}`).textContent = questions[questionCount].answers[i].a;
+    }
+}
+
+function showAnswer() {
+    document.getElementById("question").textContent = questions[questionCount].question;
+    for (let i = 0; i < 4; i++) {
+        document.getElementById(`answer${i}`).textContent = questions[questionCount].answers[i].a;
+        document.getElementById(`answer${i}`).setAttribute("data-correct", questions[questionCount].answers[i].correct)
+    }
+}
+
