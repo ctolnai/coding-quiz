@@ -88,7 +88,8 @@ display.addEventListener("click", function (event) {
         userScore.setAttribute("style", "display:block")
         userScore.textContent = localStorage.getItem("score")
         gameDone = true
-        if (gameDone){
+
+        if (gameDone) {
 
             form.addEventListener("click", function (event) {
                 event.preventDefault();
@@ -96,25 +97,20 @@ display.addEventListener("click", function (event) {
                 var initials = document.querySelector("#initials").value
                 localStorage.setItem("score", score)
                 localStorage.setItem("initials", initials)
-                console.log(initials)
-            
-                // GO BACK TO MAIN SCREEN
-                window.location.href="index.html"
-            
-            });
-            }
-            
-    }
-    
+                window.location.href = "index.html"
 
-    return;
+            });
+        }
+
+    }
+
+
+    return; 
 
 
 
 });
 
-
-// 8. click View Highscores to show initials and scores from local storage
 
 function showQuestion() {
     document.getElementById("question").textContent = questions[questionCount].question;

@@ -1,109 +1,109 @@
 var questions = [
     {
-        question: "question 1",
+        question: "What are variables used for in JavaScript Programs?",
         answers: [
             {
-                a: "answer",
+                a: "Storing numbers, dates, or other values",
                 correct: true
             },
             {
-                a: ".get()",
+                a: "Varying randomly",
                 correct: false
             },
             {
-                a: ".sort()",
+                a: "Causing high-school algebra flashbacks",
                 correct: false
             },
             {
-                a: ".last()",
+                a: "None of the above",
                 correct: false
             }
         ],
         
     },
     {
-        question: "question 2",
+        question: "What should appear at the very end of your JavaScript?",
         answers: [
             {
-                a: ".pop()",
+                a: "<end>",
                 correct: false
             },
             {
-                a: ".join()",
+                a: "<script>",
                 correct: false
             },
             {
-                a: "answer",
+                a: "</script>",
                 correct: true
             },
             {
-                a: ".map()",
+                a: "None of the above",
                 correct: false
             }
         ],
         
     },
     {
-        question: "question 3",
+        question: "What is the correct JavaScript syntax to write 'Hello World'?",
         answers: [
             {
-                a: ".pop()",
+                a: "System.out.println('Hello World')",
                 correct: false
             },
             {
-                a: ".join()",
+                a: "println ('Hello World')",
                 correct: false
             },
             {
-                a: ".push()",
+                a: "response.write('Hello World')",
                 correct: false
             },
             {
-                a: "answer",
+                a: "document.write('Hello World)",
                 correct: true
             }
         ],
         
     },
     {
-        question: "question 4",
+        question: "The _______ method of an Array object adds and/or removes elements from an array.",
         answers: [
             {
-                a: ".pop()",
+                a: "Reverse",
                 correct: false
             },
             {
-                a: ".join()",
+                a: "Shift",
                 correct: false
             },
             {
-                a: "answer",
+                a: "Splice",
                 correct: true
             },
             {
-                a: ".map()",
+                a: "Slice",
                 correct: false
             }
         ],
         
     },
     {
-        question: "question 5",
+        question: "Inside which HTML element do we put the JavaScript?",
         answers: [
             {
-                a: "answer",
+                a: "<script>",
                 correct: true
             },
             {
-                a: ".join()",
+                a: "<js>",
                 correct: false
             },
             {
-                a: ".push()",
+                a: "<scripting>",
                 correct: false
             },
             {
-                a: ".map()",
+                a: " <javascript>",
                 correct: false
             }
         ],
