@@ -80,7 +80,6 @@ display.addEventListener("click", function (event) {
     }
 
     else {
-        // clearInterval(timerFunction);
         display.setAttribute("style", "display:none");
         question.setAttribute("style", "display:none");
         gameOver.setAttribute("style", "display:block");
