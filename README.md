@@ -6,3 +6,9 @@ This application is a quiz that can be taken to practice javascript facts.  When
 ## https://ctolnai.github.io/coding-quiz/
 
  <img src="assets/images/screenshot.png"/>
+
+ ## License and copyright
+
+(c) Chris Tolnai 
+
+Licensed under the [MIT License](LICENSE).
